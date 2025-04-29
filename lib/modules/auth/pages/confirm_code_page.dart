@@ -51,12 +51,12 @@ class _ConfirmCodePageState extends State<ConfirmCodePage> {
       return;
     }
     // TODO: Fazer chamada API para validar o código
-    print('Código digitado: $code');
+    //print('Código digitado: $code');
   }
 
   void _resendCode() {
     // TODO: Fazer chamada API para reenviar o código
-    print('Reenviando código...');
+    //print('Reenviando código...');
     setState(() {
       _start = 120; // Reinicia o timer
     });
