@@ -9,7 +9,7 @@ void main() {
 }
 
 class MeuBarbeiroApp extends StatelessWidget {
-  const MeuBarbeiroApp({Key? key}) : super(key: key);
+  const MeuBarbeiroApp({super.key});
 
   @override
   Widget build(BuildContext context) {

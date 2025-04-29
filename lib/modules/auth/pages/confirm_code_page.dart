@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class ConfirmCodePage extends StatefulWidget {
-  const ConfirmCodePage({Key? key}) : super(key: key);
+  const ConfirmCodePage({super.key});
 
   @override
   State<ConfirmCodePage> createState() => _ConfirmCodePageState();

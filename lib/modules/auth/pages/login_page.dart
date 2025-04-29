@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -23,8 +23,8 @@ class _LoginPageState extends State<LoginPage> {
   void _login() {
     if (_formKey.currentState?.validate() ?? false) {
       // TODO: integrar chamada à API de login
-      print('Email: ${_emailController.text}');
-      print('Senha: ${_passwordController.text}');
+      //print('Email: ${_emailController.text}');
+      //print('Senha: ${_passwordController.text}');
     }
   }
 

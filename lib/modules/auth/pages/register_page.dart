@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({super.key});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -32,11 +32,11 @@ class _RegisterPageState extends State<RegisterPage> {
   void _register() {
     if (_formKey.currentState?.validate() ?? false) {
       // TODO: integrar chamada de API de cadastro
-      print('Nome: ${_nameController.text}');
-      print('E-mail: ${_emailController.text}');
-      print('Telefone: ${_phoneController.text}');
-      print('Senha: ${_passwordController.text}');
-      print('Perfil: $_selectedProfile');
+      // print('Nome: ${_nameController.text}');
+      // print('E-mail: ${_emailController.text}');
+      // print('Telefone: ${_phoneController.text}');
+      // print('Senha: ${_passwordController.text}');
+      // print('Perfil: $_selectedProfile');
     }
   }
 
