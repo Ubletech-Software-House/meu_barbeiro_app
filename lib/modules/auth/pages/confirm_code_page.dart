@@ -52,6 +52,7 @@ class _ConfirmCodePageState extends State<ConfirmCodePage> {
     }
     // TODO: Fazer chamada API para validar o código
     //print('Código digitado: $code');
+    Navigator.of(context).pushReplacementNamed('/home');
   }
 
   void _resendCode() {

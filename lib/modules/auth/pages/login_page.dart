@@ -25,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
       // TODO: integrar chamada à API de login
       //print('Email: ${_emailController.text}');
       //print('Senha: ${_passwordController.text}');
+      Navigator.of(context).pushReplacementNamed('/home');
     }
   }
 
