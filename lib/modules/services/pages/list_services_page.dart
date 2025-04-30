@@ -52,8 +52,13 @@ class _ListServicesPageState extends State<ListServicesPage> {
 
   void _editService(Map<String, dynamic> service) {
     // TODO: Navegar para tela de edição com dados
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Editar "${service['nome']}"')),
+    Navigator.of(context).pushNamed(
+      '/service-form',
+      arguments: {
+        'nome': service['nome'],
+        'duracao': service['duracao'],
+        'preco': service['preco'],
+      },
     );
   }
 
