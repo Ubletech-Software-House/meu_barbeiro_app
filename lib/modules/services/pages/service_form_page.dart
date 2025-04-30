@@ -47,13 +47,13 @@ class _ServiceFormPageState extends State<ServiceFormPage> {
 
       if (isEditing) {
         // TODO: Atualizar serviço via API
-        print('Serviço atualizado: $newService');
+        //print('Serviço atualizado: $newService');
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Serviço atualizado com sucesso!')),
         );
       } else {
         // TODO: Criar novo serviço via API
-        print('Serviço criado: $newService');
+        //print('Serviço criado: $newService');
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Serviço cadastrado com sucesso!')),
         );

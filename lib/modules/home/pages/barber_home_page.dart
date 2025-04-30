@@ -88,10 +88,7 @@ class BarberHomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xFFf39c12),
         onPressed: () {
-          // TODO: navegar para tela de cadastro de serviço
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Cadastrar novo serviço')),
-          );
+          Navigator.of(context).pushNamed('/create-appointment');
         },
         child: const Icon(Icons.add),
       ),
