@@ -72,35 +72,9 @@ class _ClientHomePageState extends State<ClientHomePage> {
   }
 
   void _abrirFicha(Map<String, dynamic> barbearia) {
-    // TODO: navegar para ficha detalhada
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        backgroundColor: const Color(0xFF2C2C2C),
-        title: Text(barbearia['nome'],
-            style: const TextStyle(color: Colors.white)),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(barbearia['descricao'],
-                style: const TextStyle(color: Colors.white70)),
-            const SizedBox(height: 12),
-            Text('Endereço: ${barbearia['endereco']}',
-                style: const TextStyle(color: Colors.white)),
-            const SizedBox(height: 8),
-            Text('Serviços: ${barbearia['servicos'].join(', ')}',
-                style: const TextStyle(color: Colors.white70)),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child:
-                const Text('Fechar', style: TextStyle(color: Colors.white70)),
-          )
-        ],
-      ),
+    Navigator.of(context).pushNamed(
+      '/barbershop-details',
+      arguments: barbearia,
     );
   }
 
