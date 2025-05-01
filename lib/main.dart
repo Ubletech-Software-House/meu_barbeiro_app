@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'core/theme.dart';
 import 'modules/admin/pages/admin_dashboard_page.dart';
+import 'modules/admin/pages/admin_users_page.dart';
 import 'modules/appointments/pages/appointments_list_page.dart';
 import 'modules/appointments/pages/client_create_appointment_page.dart';
 import 'modules/appointments/pages/client_history_page.dart';
@@ -63,6 +64,7 @@ class MeuBarbeiroApp extends StatelessWidget {
 
         // ADMIN
         '/admin-home': (_) => const AdminDashboardPage(),
+        '/admin-users': (_) => const AdminUsersPage(),
       },
     );
   }
