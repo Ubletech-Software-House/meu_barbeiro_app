@@ -4,6 +4,7 @@ import 'modules/appointments/pages/appointments_list_page.dart';
 import 'modules/auth/pages/splash_page.dart';
 import 'modules/auth/pages/login_page.dart';
 import 'modules/auth/pages/forgot_password_page.dart';
+import 'modules/barbershops/pages/barbershop_details_page.dart';
 import 'modules/home/pages/home_selector.dart';
 import 'modules/home/pages/client_home_page.dart';
 import 'modules/home/pages/barber_home_page.dart';
@@ -43,6 +44,7 @@ class MeuBarbeiroApp extends StatelessWidget {
         '/profile': (_) => const BarberProfilePage(),
         '/plan-details': (_) => const PlanDetailsPage(),
         '/settings': (_) => const BarberSettingsPage(),
+        '/barbershop-details': (_) => const BarbershopDetailsPage(),
       },
     );
   }
