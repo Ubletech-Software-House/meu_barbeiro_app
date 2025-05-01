@@ -79,9 +79,9 @@ class _ClientHomePageState extends State<ClientHomePage> {
   }
 
   void _agendar(Map<String, dynamic> barbearia) {
-    // TODO: abrir agendamento para essa barbearia
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Agendar em ${barbearia['nome']}')),
+    Navigator.of(context).pushNamed(
+      '/client-create-appointment',
+      arguments: barbearia,
     );
   }
 

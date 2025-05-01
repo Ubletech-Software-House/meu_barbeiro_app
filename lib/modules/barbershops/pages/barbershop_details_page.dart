@@ -64,7 +64,10 @@ class BarbershopDetailsPage extends StatelessWidget {
             const SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                // TODO: Ir para agendamento desta barbearia
+                Navigator.of(context).pushNamed(
+                  '/client-create-appointment',
+                  arguments: barbearia,
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFFf39c12),
