@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'core/theme.dart';
 import 'modules/appointments/pages/appointments_list_page.dart';
 import 'modules/appointments/pages/client_create_appointment_page.dart';
+import 'modules/appointments/pages/client_history_page.dart';
 import 'modules/auth/pages/splash_page.dart';
 import 'modules/auth/pages/login_page.dart';
 import 'modules/auth/pages/forgot_password_page.dart';
@@ -50,6 +51,7 @@ class MeuBarbeiroApp extends StatelessWidget {
         '/client-create-appointment': (_) =>
             const ClientCreateAppointmentPage(),
         '/profile-client': (_) => const ClientProfilePage(),
+        '/history-client': (_) => const ClientHistoryPage(),
       },
     );
   }
