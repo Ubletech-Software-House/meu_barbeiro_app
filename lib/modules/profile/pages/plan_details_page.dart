@@ -26,12 +26,12 @@ class PlanDetailsPage extends StatelessWidget {
             const Text('Seu plano atual:',
                 style: TextStyle(color: Colors.white70, fontSize: 16)),
             const SizedBox(height: 8),
-            Text(plano['nome'],
+            Text(plano['nome'] as String,
                 style: const TextStyle(color: Colors.white, fontSize: 20)),
             const SizedBox(height: 24),
             const Text('Valor mensal:',
                 style: TextStyle(color: Colors.white70, fontSize: 16)),
-            Text('R\$ ${plano['valor'].toStringAsFixed(2)}',
+            Text('R\$ ${(plano['valor'] as double).toStringAsFixed(2)}',
                 style: const TextStyle(
                     color: Color(0xFFf39c12),
                     fontSize: 22,
@@ -40,7 +40,7 @@ class PlanDetailsPage extends StatelessWidget {
             const Text('Data de vencimento:',
                 style: TextStyle(color: Colors.white70, fontSize: 16)),
             Text(
-              DateFormat('dd/MM/yyyy').format(plano['vencimento']),
+              DateFormat('dd/MM/yyyy').format(plano['vencimento'] as DateTime),
               style: const TextStyle(color: Colors.white, fontSize: 18),
             ),
             const Spacer(),

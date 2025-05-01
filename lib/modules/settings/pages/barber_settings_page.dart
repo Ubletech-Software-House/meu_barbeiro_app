@@ -40,7 +40,7 @@ class _BarberSettingsPageState extends State<BarberSettingsPage> {
       };
 
       // TODO: Enviar config para API
-      print('Configurações salvas: $config');
+      // print('Configurações salvas: $config');
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Configurações salvas com sucesso!')),

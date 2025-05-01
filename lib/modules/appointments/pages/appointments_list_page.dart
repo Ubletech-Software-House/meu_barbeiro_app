@@ -100,6 +100,8 @@ class _AppointmentsListPageState extends State<AppointmentsListPage> {
         '${dir.path}/agendamentos_${_currentMonth.month}_${_currentMonth.year}.csv');
     await file.writeAsString(csv);
 
+    if (!mounted) return;
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('Arquivo exportado: ${file.path}')),
     );
