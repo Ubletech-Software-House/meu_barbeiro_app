@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/theme.dart';
+import 'modules/admin/pages/admin_dashboard_page.dart';
 import 'modules/appointments/pages/appointments_list_page.dart';
 import 'modules/appointments/pages/client_create_appointment_page.dart';
 import 'modules/appointments/pages/client_history_page.dart';
@@ -34,11 +35,13 @@ class MeuBarbeiroApp extends StatelessWidget {
       theme: AppTheme.darkTheme,
       initialRoute: '/splash',
       routes: {
+        // GERAL
         '/splash': (_) => const SplashPage(),
         '/login': (_) => const LoginPage(),
         '/forgot-password': (_) => const ForgotPasswordPage(),
         '/home': (_) => const HomeSelectorPage(),
-        '/home-client': (_) => const ClientHomePage(),
+
+        // BARBEIRO
         '/home-barber': (_) => const BarberHomePage(),
         '/services': (_) => const ListServicesPage(),
         '/service-form': (_) => const ServiceFormPage(),
@@ -48,12 +51,18 @@ class MeuBarbeiroApp extends StatelessWidget {
         '/profile': (_) => const BarberProfilePage(),
         '/plan-details': (_) => const PlanDetailsPage(),
         '/settings': (_) => const BarberSettingsPage(),
+        '/barbershop-config': (_) => const BarbershopConfigPage(),
+
+        // CLIENTE
+        '/home-client': (_) => const ClientHomePage(),
         '/barbershop-details': (_) => const BarbershopDetailsPage(),
         '/client-create-appointment': (_) =>
             const ClientCreateAppointmentPage(),
         '/profile-client': (_) => const ClientProfilePage(),
         '/history-client': (_) => const ClientHistoryPage(),
-        '/barbershop-config': (_) => const BarbershopConfigPage(),
+
+        // ADMIN
+        '/admin-home': (_) => const AdminDashboardPage(),
       },
     );
   }
