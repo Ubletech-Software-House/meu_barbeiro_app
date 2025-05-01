@@ -10,6 +10,7 @@ import 'modules/services/pages/list_services_page.dart';
 import 'modules/services/pages/select_service_page.dart';
 import 'modules/services/pages/service_form_page.dart';
 import 'modules/appointments/pages/create_appointment_page.dart';
+import 'modules/settings/pages/barber_settings_page.dart';
 
 void main() {
   runApp(const MeuBarbeiroApp());
@@ -35,6 +36,7 @@ class MeuBarbeiroApp extends StatelessWidget {
         '/service-form': (_) => const ServiceFormPage(),
         '/select-service': (_) => const SelectServicePage(),
         '/create-appointment': (_) => const CreateAppointmentPage(),
+        '/settings': (_) => const BarberSettingsPage(),
       },
     );
   }

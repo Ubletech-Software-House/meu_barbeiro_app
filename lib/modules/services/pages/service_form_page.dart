@@ -94,8 +94,9 @@ class _ServiceFormPageState extends State<ServiceFormPage> {
                 decoration:
                     const InputDecoration(labelText: 'Duração (minutos)'),
                 validator: (value) {
-                  if (value == null || value.isEmpty)
+                  if (value == null || value.isEmpty) {
                     return 'Informe a duração';
+                  }
                   return null;
                 },
               ),
