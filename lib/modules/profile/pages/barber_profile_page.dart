@@ -92,6 +92,19 @@ class BarberProfilePage extends StatelessWidget {
                 minimumSize: const Size.fromHeight(48),
               ),
             ),
+            const Divider(color: Colors.white24),
+            const SizedBox(height: 16),
+            ListTile(
+              title: const Text('Minha Barbearia',
+                  style: TextStyle(color: Colors.white)),
+              subtitle: const Text('Editar nome, logo e descrição',
+                  style: TextStyle(color: Colors.white70)),
+              trailing: const Icon(Icons.arrow_forward_ios,
+                  color: Colors.white70, size: 16),
+              onTap: () {
+                Navigator.pushNamed(context, '/barbershop-config');
+              },
+            ),
           ],
         ),
       ),
