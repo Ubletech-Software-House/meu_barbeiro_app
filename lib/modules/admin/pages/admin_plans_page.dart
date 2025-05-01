@@ -35,7 +35,7 @@ class AdminPlansPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              // TODO: Navegar para cadastro de plano
+              Navigator.pushNamed(context, '/admin-plan-form');
             },
             icon: const Icon(Icons.add),
             tooltip: 'Novo Plano',
@@ -80,7 +80,11 @@ class AdminPlansPage extends StatelessWidget {
                     IconButton(
                       icon: const Icon(Icons.edit, color: Colors.white),
                       onPressed: () {
-                        // TODO: Editar plano
+                        Navigator.pushNamed(
+                          context,
+                          '/admin-plan-form',
+                          arguments: plano,
+                        );
                       },
                     ),
                     IconButton(

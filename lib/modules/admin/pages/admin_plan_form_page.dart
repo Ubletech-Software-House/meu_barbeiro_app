@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
 
 class AdminPlanFormPage extends StatefulWidget {
-  final Map<String, dynamic>? planoExistente;
+  final plano = widget.planoExistente ??
+      ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+
+  if (plano != null && _nomeController.text.isEmpty) {
+    _nomeController.text = plano['nome'];
+    _valorController.text = plano['valor'].toString();
+    _descricaoController.text = plano['descricao'];
+    suporteTicket = plano['ticket'] ?? false;
+    suporteWhatsApp = plano['whatsapp'] ?? false;
+    suporteCall = plano['call'] ?? false;
+  }
 
   const AdminPlanFormPage({super.key, this.planoExistente});
 
