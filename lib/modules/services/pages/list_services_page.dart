@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meu_barbeiro_app/shared/widgets/barber_bottom_navbar.dart';
 
 class ListServicesPage extends StatefulWidget {
   const ListServicesPage({super.key});
@@ -139,6 +140,25 @@ class _ListServicesPageState extends State<ListServicesPage> {
         backgroundColor: const Color(0xFFf39c12),
         onPressed: _addService,
         child: const Icon(Icons.add),
+      ),
+      bottomNavigationBar: BarberBottomNavbar(
+        currentIndex: 2,
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              Navigator.pushReplacementNamed(context, '/home-barber');
+              break;
+            case 1:
+              Navigator.pushReplacementNamed(context, '/appointments');
+              break;
+            case 2:
+              Navigator.pushReplacementNamed(context, '/services');
+              break;
+            case 3:
+              Navigator.pushReplacementNamed(context, '/settings');
+              break;
+          }
+        },
       ),
     );
   }

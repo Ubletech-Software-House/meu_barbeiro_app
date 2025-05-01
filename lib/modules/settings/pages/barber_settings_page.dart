@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meu_barbeiro_app/shared/widgets/barber_bottom_navbar.dart';
 
 class BarberSettingsPage extends StatefulWidget {
   const BarberSettingsPage({super.key});
@@ -149,6 +150,25 @@ class _BarberSettingsPageState extends State<BarberSettingsPage> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BarberBottomNavbar(
+        currentIndex: 3,
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              Navigator.pushReplacementNamed(context, '/home-barber');
+              break;
+            case 1:
+              Navigator.pushReplacementNamed(context, '/appointments');
+              break;
+            case 2:
+              Navigator.pushReplacementNamed(context, '/services');
+              break;
+            case 3:
+              Navigator.pushReplacementNamed(context, '/settings');
+              break;
+          }
+        },
       ),
     );
   }
