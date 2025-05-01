@@ -3,16 +3,22 @@ import 'package:flutter/material.dart';
 class HomeSelectorPage extends StatelessWidget {
   const HomeSelectorPage({super.key});
 
-  // Simulação de perfil — depois você vai pegar isso da API ou local storage
-  final String userProfile = 'cliente'; // ou 'barbeiro'
-
   @override
   Widget build(BuildContext context) {
+    // TODO: Substituir por leitura real do usuário logado (via authProvider, localStorage, etc.)
+    final String tipoUsuario = 'admin'; // mock: admin, barbeiro, cliente
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (userProfile == 'barbeiro') {
-        Navigator.pushReplacementNamed(context, '/home-barber');
-      } else {
-        Navigator.pushReplacementNamed(context, '/home-client');
+      switch (tipoUsuario) {
+        case 'admin':
+          Navigator.pushReplacementNamed(context, '/admin-home');
+          break;
+        case 'barbeiro':
+          Navigator.pushReplacementNamed(context, '/home-barber');
+          break;
+        case 'cliente':
+        default:
+          Navigator.pushReplacementNamed(context, '/home-client');
       }
     });
 

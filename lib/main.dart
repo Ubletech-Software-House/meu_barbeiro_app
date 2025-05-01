@@ -35,7 +35,7 @@ class MeuBarbeiroApp extends StatelessWidget {
       theme: AppTheme.darkTheme,
       initialRoute: '/splash',
       routes: {
-        // GERAL
+        // AUTH
         '/splash': (_) => const SplashPage(),
         '/login': (_) => const LoginPage(),
         '/forgot-password': (_) => const ForgotPasswordPage(),
