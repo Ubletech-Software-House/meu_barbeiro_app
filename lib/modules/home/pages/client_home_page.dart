@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meu_barbeiro_app/shared/widgets/client_bottom_navbar.dart';
 
 class ClientHomePage extends StatefulWidget {
   const ClientHomePage({super.key});
@@ -156,6 +157,22 @@ class _ClientHomePageState extends State<ClientHomePage> {
                   );
                 },
               ),
+      ),
+      bottomNavigationBar: ClientBottomNavbar(
+        currentIndex: 0,
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              Navigator.pushReplacementNamed(context, '/home-client');
+              break;
+            case 1:
+              Navigator.pushReplacementNamed(context, '/history-client');
+              break;
+            case 2:
+              Navigator.pushReplacementNamed(context, '/profile-client');
+              break;
+          }
+        },
       ),
     );
   }
