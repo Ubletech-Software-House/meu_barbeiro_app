@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'core/theme.dart';
+import 'modules/appointments/pages/appointments_list_page.dart';
 import 'modules/auth/pages/splash_page.dart';
 import 'modules/auth/pages/login_page.dart';
 import 'modules/auth/pages/forgot_password_page.dart';
 import 'modules/home/pages/home_selector.dart';
 import 'modules/home/pages/client_home_page.dart';
 import 'modules/home/pages/barber_home_page.dart';
+import 'modules/profile/pages/barber_profile_page.dart';
 import 'modules/services/pages/list_services_page.dart';
 import 'modules/services/pages/select_service_page.dart';
 import 'modules/services/pages/service_form_page.dart';
@@ -35,7 +37,9 @@ class MeuBarbeiroApp extends StatelessWidget {
         '/services': (_) => const ListServicesPage(),
         '/service-form': (_) => const ServiceFormPage(),
         '/select-service': (_) => const SelectServicePage(),
+        '/appointments': (_) => const AppointmentsListPage(),
         '/create-appointment': (_) => const CreateAppointmentPage(),
+        '/profile': (_) => const BarberProfilePage(),
         '/settings': (_) => const BarberSettingsPage(),
       },
     );
